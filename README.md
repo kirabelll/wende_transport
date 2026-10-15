@@ -22,7 +22,7 @@ The application is structured into **11 registered Frappe modules**:
 | **Revenue Sharing** | `Revenue Share Contract`, `Revenue Share Trip`, `Revenue Share Settlement` | Joint venture & tractor-trailer revenue sharing models, expense deduction prior to percentage split. |
 | **Broker Management** | `Transport Broker`, `Broker Commission` | Cargo broker registry, commission percentage/flat fee calculation per trip, and broker payout balances. |
 | **Operations & Safety** | `Accident Record`, `Operations Alert`, `Alert Rule`, `Approval Request`, `Approval Rule`, `Company Legal Document`, `Contract Expiry` | Accident incident reports, proactive operations alerts (insurance expiry, overdue work orders, missing PODs > 3 days), and rule-based approval routing. |
-| **Integrations** | `Telegram Config`, `Telegram Log` | Telegram Bot notifications for critical events (accidents, emergency breakdowns, critical compliance expirations). |
+| **Fleet Integrations** | `Telegram Config`, `Telegram Log` | Telegram Bot notifications for critical events (accidents, emergency breakdowns, critical compliance expirations). |
 
 
 
@@ -131,7 +131,7 @@ The app uses **one single parent workspace (`Wende Transport`)** with all operat
    ├── 📊 Revenue Sharing
    ├── 👤 Broker Management
    ├── 🛡️ Operations & Safety
-   └── 🔗 Integrations & Telegram
+   └── 🔗 Fleet Integrations & Telegram
 ```
 
 ---

@@ -9,7 +9,7 @@
   "icon": "share-2",
   "indicator_color": "cyan",
   "is_hidden": 0,
-  "label": "Integrations",
+  "label": "Fleet Integrations",
   "links": [
     {
       "hidden": 0,
@@ -42,8 +42,8 @@
       "type": "Link"
     }
   ],
-  "module": "Integrations",
-  "name": "Integrations",
+  "module": "Fleet Integrations",
+  "name": "Fleet Integrations",
   "number_cards": [],
   "parent_page": "Wende Transport",
   "public": 1,
@@ -67,5 +67,5 @@
       "type": "DocType"
     }
   ],
-  "title": "Integrations"
+  "title": "Fleet Integrations"
 }
