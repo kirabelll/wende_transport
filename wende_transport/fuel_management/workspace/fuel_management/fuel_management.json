@@ -1,0 +1,71 @@
+{
+  "charts": [],
+  "content": "[{\"id\":\"heading_fuel\",\"type\":\"header\",\"data\":{\"text\":\"Fuel Management & Efficiency\",\"level\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "droplet",
+  "indicator_color": "yellow",
+  "is_hidden": 0,
+  "label": "Fuel Management",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Fuel Logs & Standards",
+      "link_count": 0,
+      "link_to": "Fuel Log",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Fuel Logs",
+      "link_count": 0,
+      "link_to": "Fuel Log",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Fuel Standards",
+      "link_count": 0,
+      "link_to": "Fuel Standard",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    }
+  ],
+  "module": "Fuel Management",
+  "name": "Fuel Management",
+  "number_cards": [],
+  "parent_page": "Wende Transport",
+  "public": 1,
+
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 9.0,
+  "shortcuts": [
+    {
+      "color": "Yellow",
+      "doc_view": "List",
+      "label": "Fuel Logs",
+      "link_to": "Fuel Log",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "label": "Fuel Standards",
+      "link_to": "Fuel Standard",
+      "type": "DocType"
+    }
+  ],
+  "title": "Fuel Management"
+}

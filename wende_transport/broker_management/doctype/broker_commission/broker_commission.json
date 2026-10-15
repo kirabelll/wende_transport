@@ -1,0 +1,137 @@
+{
+  "actions": [],
+  "autoname": "format:BCOM-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "broker",
+    "trip",
+    "order",
+    "status",
+    "column_break_bc",
+    "commission_type",
+    "rate",
+    "trip_revenue",
+    "amount",
+    "disbursement_section",
+    "approved_by",
+    "approved_at",
+    "paid_at",
+    "payment_ref",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "broker",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Broker",
+      "options": "Transport Broker",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trip",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Linked Trip",
+      "options": "Trip"
+    },
+    {
+      "fieldname": "order",
+      "fieldtype": "Link",
+      "label": "Customer Order",
+      "options": "Customer Order"
+    },
+    {
+      "default": "Unpaid",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Unpaid\nApproved\nPaid"
+    },
+    {
+      "fieldname": "column_break_bc",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Percentage",
+      "fieldname": "commission_type",
+      "fieldtype": "Select",
+      "label": "Commission Type",
+      "options": "Percentage\nFixed"
+    },
+    {
+      "fieldname": "rate",
+      "fieldtype": "Float",
+      "label": "Commission Rate (% or Fixed)"
+    },
+    {
+      "fieldname": "trip_revenue",
+      "fieldtype": "Currency",
+      "label": "Trip Base Revenue (ETB)"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Commission Amount (ETB)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "disbursement_section",
+      "fieldtype": "Section Break",
+      "label": "Approval & Payment"
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Data",
+      "label": "Approved By"
+    },
+    {
+      "fieldname": "approved_at",
+      "fieldtype": "Datetime",
+      "label": "Approved At"
+    },
+    {
+      "fieldname": "paid_at",
+      "fieldtype": "Datetime",
+      "label": "Paid At"
+    },
+    {
+      "fieldname": "payment_ref",
+      "fieldtype": "Data",
+      "label": "Payment Reference / Cheque No."
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Broker Management",
+  "name": "Broker Commission",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

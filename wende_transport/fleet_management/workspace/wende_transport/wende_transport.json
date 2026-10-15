@@ -1,0 +1,114 @@
+{
+  "charts": [],
+  "content": "[{\"id\":\"heading_wt\",\"type\":\"header\",\"data\":{\"text\":\"Wende Transport Fleet & Logistics Management\",\"level\":3}},{\"id\":\"card_wt_fleet\",\"type\":\"card\",\"data\":{\"card_name\":\"Fleet Operations\"}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "truck",
+  "indicator_color": "blue",
+  "is_hidden": 0,
+  "label": "Wende Transport",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Fleet Core",
+      "link_count": 0,
+      "link_to": "Vehicle",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Vehicles",
+      "link_count": 0,
+      "link_to": "Vehicle",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Active Trips",
+      "link_count": 0,
+      "link_to": "Trip",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Customer Orders",
+      "link_count": 0,
+      "link_to": "Customer Order",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Work Orders",
+      "link_count": 0,
+      "link_to": "Work Order",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Operations Alerts",
+      "link_count": 0,
+      "link_to": "Operations Alert",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    }
+  ],
+  "module": "Fleet Management",
+  "name": "Wende Transport",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 1.0,
+  "shortcuts": [
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "label": "All Vehicles",
+      "link_to": "Vehicle",
+      "type": "DocType"
+    },
+    {
+      "color": "Cyan",
+      "doc_view": "List",
+      "label": "Active Trips",
+      "link_to": "Trip",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "doc_view": "List",
+      "label": "Open Work Orders",
+      "link_to": "Work Order",
+      "type": "DocType"
+    },
+    {
+      "color": "Red",
+      "doc_view": "List",
+      "label": "Operations Alerts",
+      "link_to": "Operations Alert",
+      "type": "DocType"
+    }
+  ],
+  "title": "Wende Transport"
+}

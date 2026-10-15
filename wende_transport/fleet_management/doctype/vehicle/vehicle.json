@@ -1,0 +1,369 @@
+{
+  "actions": [],
+  "autoname": "field:plate_number",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "basic_details_section",
+    "plate_number",
+    "vehicle_type",
+    "category",
+    "status",
+    "operational_status",
+    "column_break_basic",
+    "make",
+    "model",
+    "year",
+    "color",
+    "capacity_tons",
+    "ownership_section",
+    "ownership",
+    "owner_name",
+    "source_rental_vehicle",
+    "column_break_driver",
+    "assigned_driver",
+    "current_km",
+    "photo",
+    "technical_specs_section",
+    "engine_number",
+    "chassis_number",
+    "gps_imei",
+    "column_break_fuel",
+    "fuel_type",
+    "fuel_tank_capacity",
+    "last_known_location",
+    "last_location_at",
+    "compliance_section",
+    "compliance_locked",
+    "lock_reason",
+    "locked_at",
+    "column_break_compliance",
+    "insurance_expiry",
+    "inspection_expiry",
+    "permit_expiry",
+    "libre_expiry",
+    "bolo_expiry",
+    "road_fund_expiry",
+    "roadworthiness_expiry",
+    "financials_section",
+    "purchase_cost",
+    "useful_life_years",
+    "residual_value",
+    "depreciation_method"
+  ],
+  "fields": [
+    {
+      "fieldname": "basic_details_section",
+      "fieldtype": "Section Break",
+      "label": "Basic Information"
+    },
+    {
+      "fieldname": "plate_number",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Plate Number",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "default": "Standalone",
+      "fieldname": "vehicle_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Vehicle Type",
+      "options": "Standalone\nPower Unit\nTrailer"
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Category",
+      "options": "Vehicle Category"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Active\nMaintenance\nBreakdown\nInactive"
+    },
+    {
+      "default": "Idle",
+      "fieldname": "operational_status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Operational Status",
+      "options": "Idle\nOn Trip\nLoading\nMaintenance\nExternal\nLocked"
+    },
+    {
+      "fieldname": "column_break_basic",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "make",
+      "fieldtype": "Data",
+      "label": "Make"
+    },
+    {
+      "fieldname": "model",
+      "fieldtype": "Data",
+      "label": "Model"
+    },
+    {
+      "fieldname": "year",
+      "fieldtype": "Int",
+      "label": "Year"
+    },
+    {
+      "fieldname": "color",
+      "fieldtype": "Data",
+      "label": "Color"
+    },
+    {
+      "default": "0",
+      "fieldname": "capacity_tons",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Capacity (Tons)"
+    },
+    {
+      "fieldname": "ownership_section",
+      "fieldtype": "Section Break",
+      "label": "Ownership & Driver"
+    },
+    {
+      "default": "Company",
+      "fieldname": "ownership",
+      "fieldtype": "Select",
+      "label": "Ownership",
+      "options": "Company\nRented\nLeased"
+    },
+    {
+      "depends_on": "eval:doc.ownership!='Company'",
+      "fieldname": "owner_name",
+      "fieldtype": "Data",
+      "label": "Owner Name"
+    },
+    {
+      "fieldname": "source_rental_vehicle",
+      "fieldtype": "Link",
+      "label": "Source Rental Vehicle",
+      "options": "Rental Vehicle"
+    },
+    {
+      "fieldname": "column_break_driver",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "assigned_driver",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Assigned Driver",
+      "options": "Transport Employee"
+    },
+    {
+      "default": "0",
+      "fieldname": "current_km",
+      "fieldtype": "Float",
+      "label": "Current Odometer (KM)"
+    },
+    {
+      "fieldname": "photo",
+      "fieldtype": "Attach Image",
+      "label": "Photo"
+    },
+    {
+      "fieldname": "technical_specs_section",
+      "fieldtype": "Section Break",
+      "label": "Technical Specifications & Telematics"
+    },
+    {
+      "fieldname": "engine_number",
+      "fieldtype": "Data",
+      "label": "Engine Number"
+    },
+    {
+      "fieldname": "chassis_number",
+      "fieldtype": "Data",
+      "label": "Chassis Number"
+    },
+    {
+      "fieldname": "gps_imei",
+      "fieldtype": "Data",
+      "label": "GPS Device IMEI"
+    },
+    {
+      "fieldname": "column_break_fuel",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Diesel",
+      "fieldname": "fuel_type",
+      "fieldtype": "Select",
+      "label": "Fuel Type",
+      "options": "Diesel\nPetrol\nElectric\nHybrid"
+    },
+    {
+      "fieldname": "fuel_tank_capacity",
+      "fieldtype": "Float",
+      "label": "Tank Capacity (Liters)"
+    },
+    {
+      "fieldname": "last_known_location",
+      "fieldtype": "Data",
+      "label": "Last Known Location"
+    },
+    {
+      "fieldname": "last_location_at",
+      "fieldtype": "Datetime",
+      "label": "Last Location Timestamp"
+    },
+    {
+      "fieldname": "compliance_section",
+      "fieldtype": "Section Break",
+      "label": "Compliance & Legal Expiry Dates"
+    },
+    {
+      "default": "0",
+      "fieldname": "compliance_locked",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Compliance Locked"
+    },
+    {
+      "fieldname": "lock_reason",
+      "fieldtype": "Small Text",
+      "label": "Lock Reason",
+      "read_only": 1
+    },
+    {
+      "fieldname": "locked_at",
+      "fieldtype": "Datetime",
+      "label": "Locked At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_compliance",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "insurance_expiry",
+      "fieldtype": "Date",
+      "label": "Insurance Expiry Date"
+    },
+    {
+      "fieldname": "inspection_expiry",
+      "fieldtype": "Date",
+      "label": "Annual Inspection Expiry"
+    },
+    {
+      "fieldname": "permit_expiry",
+      "fieldtype": "Date",
+      "label": "Operating Permit Expiry"
+    },
+    {
+      "fieldname": "libre_expiry",
+      "fieldtype": "Date",
+      "label": "Libre Expiry Date"
+    },
+    {
+      "fieldname": "bolo_expiry",
+      "fieldtype": "Date",
+      "label": "Bolo Expiry Date"
+    },
+    {
+      "fieldname": "road_fund_expiry",
+      "fieldtype": "Date",
+      "label": "Road Fund Expiry Date"
+    },
+    {
+      "fieldname": "roadworthiness_expiry",
+      "fieldtype": "Date",
+      "label": "Roadworthiness Expiry Date"
+    },
+    {
+      "fieldname": "financials_section",
+      "fieldtype": "Section Break",
+      "label": "Asset Valuation & Depreciation"
+    },
+    {
+      "default": "0",
+      "fieldname": "purchase_cost",
+      "fieldtype": "Currency",
+      "label": "Purchase Cost"
+    },
+    {
+      "default": "5",
+      "fieldname": "useful_life_years",
+      "fieldtype": "Float",
+      "label": "Useful Life (Years)"
+    },
+    {
+      "default": "0",
+      "fieldname": "residual_value",
+      "fieldtype": "Currency",
+      "label": "Residual / Salvage Value"
+    },
+    {
+      "default": "Straight Line",
+      "fieldname": "depreciation_method",
+      "fieldtype": "Select",
+      "label": "Depreciation Method",
+      "options": "Straight Line\nDeclining Balance"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Fleet Management",
+  "name": "Vehicle",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Fleet Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 0,
+      "delete": 0,
+      "email": 0,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Dispatcher",
+      "share": 0,
+      "write": 0
+    }
+  ],
+  "sort_field": "plate_number",
+  "sort_order": "ASC",
+  "track_changes": 1
+}

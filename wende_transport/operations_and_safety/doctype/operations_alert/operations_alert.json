@@ -1,0 +1,146 @@
+{
+  "actions": [],
+  "autoname": "format:ALT-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "title",
+    "alert_type",
+    "severity",
+    "is_resolved",
+    "column_break_alt",
+    "entity_type",
+    "entity_id",
+    "auto_generated",
+    "assigned_to",
+    "due_at",
+    "message_section",
+    "message",
+    "resolution_section",
+    "resolved_by",
+    "resolved_at",
+    "resolved_note"
+  ],
+  "fields": [
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Alert Headline",
+      "reqd": 1
+    },
+    {
+      "default": "delayed_loading",
+      "fieldname": "alert_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Alert Type",
+      "options": "delayed_loading\ndelayed_delivery\nmissing_pod\nqty_mismatch\nrepeated_breakdown\nunusual_expense\nexpired_docs\ncash_variance\noverdue_invoice\nunresolved_accountability"
+    },
+    {
+      "default": "warning",
+      "fieldname": "severity",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Severity",
+      "options": "critical\nurgent\nwarning\ninfo"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_resolved",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Is Resolved"
+    },
+    {
+      "fieldname": "column_break_alt",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "entity_type",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Linked Entity Type"
+    },
+    {
+      "fieldname": "entity_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Linked Entity Reference"
+    },
+    {
+      "default": "1",
+      "fieldname": "auto_generated",
+      "fieldtype": "Check",
+      "label": "System Auto Generated"
+    },
+    {
+      "fieldname": "assigned_to",
+      "fieldtype": "Link",
+      "label": "Assigned Resolver",
+      "options": "User"
+    },
+    {
+      "fieldname": "due_at",
+      "fieldtype": "Datetime",
+      "label": "Action Due Timestamp"
+    },
+    {
+      "fieldname": "message_section",
+      "fieldtype": "Section Break",
+      "label": "Alert Description"
+    },
+    {
+      "fieldname": "message",
+      "fieldtype": "Small Text",
+      "label": "Detailed Alert Message",
+      "reqd": 1
+    },
+    {
+      "fieldname": "resolution_section",
+      "fieldtype": "Section Break",
+      "label": "Resolution Audit"
+    },
+    {
+      "fieldname": "resolved_by",
+      "fieldtype": "Data",
+      "label": "Resolved By"
+    },
+    {
+      "fieldname": "resolved_at",
+      "fieldtype": "Datetime",
+      "label": "Resolved At"
+    },
+    {
+      "fieldname": "resolved_note",
+      "fieldtype": "Small Text",
+      "label": "Resolution Justification / Actions Taken"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Operations and Safety",
+  "name": "Operations Alert",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

@@ -1,0 +1,187 @@
+{
+  "actions": [],
+  "autoname": "format:RST-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "contract",
+    "vehicle",
+    "trip_date",
+    "route",
+    "customer",
+    "quantity_tons",
+    "column_break_rst",
+    "trip_revenue",
+    "fuel_cost",
+    "driver_per_diem",
+    "gps_cost",
+    "insurance_cost",
+    "broker_commission",
+    "other_expenses",
+    "shares_section",
+    "total_expenses",
+    "net_income",
+    "column_break_shares",
+    "owner_share",
+    "company_share",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "contract",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Revenue Share Contract",
+      "options": "Revenue Share Contract",
+      "reqd": 1
+    },
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "label": "Vehicle (Power Unit)",
+      "options": "Vehicle"
+    },
+    {
+      "default": "Today",
+      "fieldname": "trip_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Trip Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "route",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Route"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Data",
+      "label": "Customer"
+    },
+    {
+      "fieldname": "quantity_tons",
+      "fieldtype": "Float",
+      "label": "Tonnage"
+    },
+    {
+      "fieldname": "column_break_rst",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "trip_revenue",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Gross Trip Revenue (ETB)",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "fuel_cost",
+      "fieldtype": "Currency",
+      "label": "Fuel Cost"
+    },
+    {
+      "default": "0",
+      "fieldname": "driver_per_diem",
+      "fieldtype": "Currency",
+      "label": "Driver Per Diem"
+    },
+    {
+      "default": "0",
+      "fieldname": "gps_cost",
+      "fieldtype": "Currency",
+      "label": "GPS Tracking Fee"
+    },
+    {
+      "default": "0",
+      "fieldname": "insurance_cost",
+      "fieldtype": "Currency",
+      "label": "Transit Insurance Cost"
+    },
+    {
+      "default": "0",
+      "fieldname": "broker_commission",
+      "fieldtype": "Currency",
+      "label": "Broker Commission"
+    },
+    {
+      "default": "0",
+      "fieldname": "other_expenses",
+      "fieldtype": "Currency",
+      "label": "Other Deductible Expenses"
+    },
+    {
+      "fieldname": "shares_section",
+      "fieldtype": "Section Break",
+      "label": "Net Profit Split"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_expenses",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Total Deductions (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "net_income",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Net Distributable Income (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_shares",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "owner_share",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Tractor Owner Share (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "company_share",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Company Trailer Share (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Revenue Sharing",
+  "name": "Revenue Share Trip",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

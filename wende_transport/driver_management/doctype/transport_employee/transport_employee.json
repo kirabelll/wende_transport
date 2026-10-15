@@ -1,0 +1,237 @@
+{
+  "actions": [],
+  "autoname": "field:emp_number",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "employee_section",
+    "emp_number",
+    "first_name",
+    "last_name",
+    "full_name",
+    "role",
+    "status",
+    "column_break_emp",
+    "department",
+    "contract_type",
+    "hire_date",
+    "basic_salary",
+    "per_diem_rate",
+    "contact_section",
+    "phone",
+    "email",
+    "national_id",
+    "bank_account",
+    "column_break_contact",
+    "address",
+    "emergency_contact",
+    "photo",
+    "license_section",
+    "license_number",
+    "license_expiry",
+    "column_break_med",
+    "medical_cert_expiry",
+    "training_valid_until"
+  ],
+  "fields": [
+    {
+      "fieldname": "employee_section",
+      "fieldtype": "Section Break",
+      "label": "Employee Profile"
+    },
+    {
+      "fieldname": "emp_number",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Employee ID / Badge Number",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "first_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "First Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "last_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Last Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "full_name",
+      "fieldtype": "Data",
+      "label": "Full Name",
+      "read_only": 1
+    },
+    {
+      "default": "Driver",
+      "fieldname": "role",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Designation / Role",
+      "options": "Driver\nHelper\nTechnical\nStore\nCashier\nHR\nOffice\nManagement"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nInactive\nSuspended"
+    },
+    {
+      "fieldname": "column_break_emp",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Fleet",
+      "fieldname": "department",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Department",
+      "options": "Fleet\nWorkshop\nStore\nFinance\nHR\nOperations"
+    },
+    {
+      "default": "Permanent",
+      "fieldname": "contract_type",
+      "fieldtype": "Select",
+      "label": "Contract Type",
+      "options": "Permanent\nContract\nDaily"
+    },
+    {
+      "default": "Today",
+      "fieldname": "hire_date",
+      "fieldtype": "Date",
+      "label": "Date of Hire"
+    },
+    {
+      "default": "0",
+      "fieldname": "basic_salary",
+      "fieldtype": "Currency",
+      "label": "Monthly Basic Salary (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "per_diem_rate",
+      "fieldtype": "Currency",
+      "label": "Daily Per Diem Rate (ETB)"
+    },
+    {
+      "fieldname": "contact_section",
+      "fieldtype": "Section Break",
+      "label": "Contact & Bank Credentials"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Phone Number",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "national_id",
+      "fieldtype": "Data",
+      "label": "National ID / Kebele Card"
+    },
+    {
+      "fieldname": "bank_account",
+      "fieldtype": "Data",
+      "label": "Bank Account Number (CBE/Other)"
+    },
+    {
+      "fieldname": "column_break_contact",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Residential Address"
+    },
+    {
+      "fieldname": "emergency_contact",
+      "fieldtype": "Data",
+      "label": "Emergency Contact Name & Phone"
+    },
+    {
+      "fieldname": "photo",
+      "fieldtype": "Attach Image",
+      "label": "Employee Photo"
+    },
+    {
+      "fieldname": "license_section",
+      "fieldtype": "Section Break",
+      "label": "Driver License & Certifications"
+    },
+    {
+      "fieldname": "license_number",
+      "fieldtype": "Data",
+      "label": "Driving License Grade / Number"
+    },
+    {
+      "fieldname": "license_expiry",
+      "fieldtype": "Date",
+      "label": "License Expiry Date"
+    },
+    {
+      "fieldname": "column_break_med",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "medical_cert_expiry",
+      "fieldtype": "Date",
+      "label": "Medical Certificate Expiry"
+    },
+    {
+      "fieldname": "training_valid_until",
+      "fieldtype": "Date",
+      "label": "Safety Training Valid Until"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Driver Management",
+  "name": "Transport Employee",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Fleet Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "emp_number",
+  "sort_order": "ASC"
+}

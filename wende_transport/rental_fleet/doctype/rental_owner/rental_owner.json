@@ -1,0 +1,152 @@
+{
+  "actions": [],
+  "autoname": "field:owner_name",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "owner_name",
+    "phone",
+    "email",
+    "address",
+    "owner_type",
+    "role",
+    "column_break_ro",
+    "current_balance",
+    "payment_terms",
+    "payment_method",
+    "bank_name",
+    "bank_account_holder",
+    "bank_account_number",
+    "driver_details_section",
+    "driver_name",
+    "driver_phone",
+    "driver_license_number"
+  ],
+  "fields": [
+    {
+      "fieldname": "owner_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Truck Owner / Transporter Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Phone Number",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "default": "Individual",
+      "fieldname": "owner_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Owner Type",
+      "options": "Individual\nOrganization\nBroker"
+    },
+    {
+      "default": "Owner",
+      "fieldname": "role",
+      "fieldtype": "Select",
+      "label": "Role",
+      "options": "Owner\nDriver\nOwner Driver"
+    },
+    {
+      "fieldname": "column_break_ro",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "current_balance",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Payable Balance (ETB)"
+    },
+    {
+      "default": "Cash",
+      "fieldname": "payment_terms",
+      "fieldtype": "Select",
+      "label": "Payment Terms",
+      "options": "Cash\nCredit\nPer Trip"
+    },
+    {
+      "default": "Bank Transfer",
+      "fieldname": "payment_method",
+      "fieldtype": "Select",
+      "label": "Payment Method",
+      "options": "Bank Transfer\nCash\nTelebirr / Mobile Money"
+    },
+    {
+      "fieldname": "bank_name",
+      "fieldtype": "Data",
+      "label": "Bank Name"
+    },
+    {
+      "fieldname": "bank_account_holder",
+      "fieldtype": "Data",
+      "label": "Bank Account Holder Name"
+    },
+    {
+      "fieldname": "bank_account_number",
+      "fieldtype": "Data",
+      "label": "Account / Telebirr Number"
+    },
+    {
+      "fieldname": "driver_details_section",
+      "fieldtype": "Section Break",
+      "label": "Designated External Driver"
+    },
+    {
+      "fieldname": "driver_name",
+      "fieldtype": "Data",
+      "label": "Driver Name"
+    },
+    {
+      "fieldname": "driver_phone",
+      "fieldtype": "Data",
+      "label": "Driver Phone"
+    },
+    {
+      "fieldname": "driver_license_number",
+      "fieldtype": "Data",
+      "label": "Driver License Number"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Rental Fleet",
+  "name": "Rental Owner",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "owner_name",
+  "sort_order": "ASC"
+}

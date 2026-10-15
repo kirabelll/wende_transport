@@ -1,0 +1,105 @@
+{
+  "actions": [],
+  "autoname": "field:plate_number",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "plate_number",
+    "owner",
+    "vehicle_type",
+    "is_active",
+    "column_break_rv",
+    "capacity_tons",
+    "rate_per_ton",
+    "rate_per_trip",
+    "payment_terms"
+  ],
+  "fields": [
+    {
+      "fieldname": "plate_number",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Plate Number",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "owner",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Truck Owner",
+      "options": "Rental Owner",
+      "reqd": 1
+    },
+    {
+      "default": "Cement Tanker",
+      "fieldname": "vehicle_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Vehicle Category",
+      "options": "Cement Tanker\nGravel Tipper\nFlatbed Trailer\nCargo Truck"
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Is Active"
+    },
+    {
+      "fieldname": "column_break_rv",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "40",
+      "fieldname": "capacity_tons",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Capacity (Tons)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "rate_per_ton",
+      "fieldtype": "Currency",
+      "label": "Contracted Rate Per Ton (ETB)"
+    },
+    {
+      "fieldname": "rate_per_trip",
+      "fieldtype": "Currency",
+      "label": "Contracted Rate Per Trip (ETB)"
+    },
+    {
+      "default": "Cash",
+      "fieldname": "payment_terms",
+      "fieldtype": "Select",
+      "label": "Payment Terms",
+      "options": "Cash\nCredit\nPer Trip"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Rental Fleet",
+  "name": "Rental Vehicle",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "plate_number",
+  "sort_order": "ASC"
+}

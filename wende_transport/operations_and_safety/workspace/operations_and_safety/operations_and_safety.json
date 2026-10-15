@@ -1,0 +1,138 @@
+{
+  "charts": [],
+  "content": "[{\"id\":\"heading_operations\",\"type\":\"header\",\"data\":{\"text\":\"Operations & Safety\",\"level\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "shield",
+  "indicator_color": "red",
+  "is_hidden": 0,
+  "label": "Operations & Safety",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Safety & Incident Management",
+      "link_count": 0,
+      "link_to": "Accident Record",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Accident Records",
+      "link_count": 0,
+      "link_to": "Accident Record",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Operations Alerts",
+      "link_count": 0,
+      "link_to": "Operations Alert",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Alert Rules",
+      "link_count": 0,
+      "link_to": "Alert Rule",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Approvals & Compliance",
+      "link_count": 0,
+      "link_to": "Approval Request",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Approval Requests",
+      "link_count": 0,
+      "link_to": "Approval Request",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Approval Rules",
+      "link_count": 0,
+      "link_to": "Approval Rule",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Company Legal Documents",
+      "link_count": 0,
+      "link_to": "Company Legal Document",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Contract Expiries",
+      "link_count": 0,
+      "link_to": "Contract Expiry",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    }
+  ],
+  "module": "Operations and Safety",
+  "name": "Operations & Safety",
+  "number_cards": [],
+  "parent_page": "Wende Transport",
+  "public": 1,
+
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 5.0,
+  "shortcuts": [
+    {
+      "color": "Red",
+      "doc_view": "List",
+      "label": "Open Alerts",
+      "link_to": "Operations Alert",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "doc_view": "List",
+      "label": "Pending Approvals",
+      "link_to": "Approval Request",
+      "type": "DocType"
+    },
+    {
+      "color": "Grey",
+      "doc_view": "List",
+      "label": "Accident Records",
+      "link_to": "Accident Record",
+      "type": "DocType"
+    }
+  ],
+  "title": "Operations & Safety"
+}

@@ -1,0 +1,91 @@
+{
+  "actions": [],
+  "autoname": "format:TYH-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "tyre_asset",
+    "action",
+    "vehicle_plate",
+    "position",
+    "column_break_tyh",
+    "km_at_action",
+    "performed_by",
+    "reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "tyre_asset",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Tyre Asset",
+      "options": "Tyre Asset",
+      "reqd": 1
+    },
+    {
+      "fieldname": "action",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Action",
+      "options": "Fitted\nRemoved\nRotated\nRetread\nScrapped\nTransferred",
+      "reqd": 1
+    },
+    {
+      "fieldname": "vehicle_plate",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Vehicle Plate"
+    },
+    {
+      "fieldname": "position",
+      "fieldtype": "Select",
+      "label": "Wheel Position",
+      "options": "FL\nFR\nRL1\nRL2\nRR1\nRR2\nSpare"
+    },
+    {
+      "fieldname": "column_break_tyh",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "km_at_action",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "KM at Action"
+    },
+    {
+      "fieldname": "performed_by",
+      "fieldtype": "Data",
+      "label": "Mechanic / Performed By"
+    },
+    {
+      "fieldname": "reason",
+      "fieldtype": "Small Text",
+      "label": "Action Reason / Tread Depth Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Tyre Management",
+  "name": "Tyre History",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

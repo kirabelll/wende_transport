@@ -1,0 +1,122 @@
+{
+  "actions": [],
+  "autoname": "format:RSC-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "contract_section",
+    "power_owner",
+    "power_vehicle_plate",
+    "company_trailer_plate",
+    "status",
+    "column_break_rsc",
+    "owner_share_percent",
+    "company_share_percent",
+    "start_date",
+    "end_date",
+    "expense_responsibility",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "contract_section",
+      "fieldtype": "Section Break",
+      "label": "Revenue Sharing Agreement"
+    },
+    {
+      "fieldname": "power_owner",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Tractor Owner",
+      "options": "Rental Owner"
+    },
+    {
+      "fieldname": "power_vehicle_plate",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "External Power Unit (Tractor) Plate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company_trailer_plate",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Company Trailer / Tanker Plate"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nEnded\nSuspended"
+    },
+    {
+      "fieldname": "column_break_rsc",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "50",
+      "fieldname": "owner_share_percent",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Tractor Owner Share (%)",
+      "reqd": 1
+    },
+    {
+      "default": "50",
+      "fieldname": "company_share_percent",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Company Trailer Share (%)",
+      "reqd": 1
+    },
+    {
+      "default": "Today",
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date"
+    },
+    {
+      "fieldname": "expense_responsibility",
+      "fieldtype": "Small Text",
+      "label": "Expense Deductions Agreement"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Revenue Sharing",
+  "name": "Revenue Share Contract",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

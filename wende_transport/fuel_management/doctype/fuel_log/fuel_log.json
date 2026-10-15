@@ -1,0 +1,136 @@
+{
+  "actions": [],
+  "autoname": "format:FUEL-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "vehicle",
+    "trip",
+    "driver",
+    "date",
+    "column_break_fuel",
+    "liters",
+    "cost_per_liter",
+    "total_cost",
+    "odometer_km",
+    "fuel_station",
+    "cashier",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Vehicle",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trip",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Linked Trip",
+      "options": "Trip"
+    },
+    {
+      "fieldname": "driver",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Driver",
+      "options": "Transport Employee"
+    },
+    {
+      "default": "Today",
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Refuel Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_fuel",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "liters",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Liters Dispensed",
+      "reqd": 1
+    },
+    {
+      "fieldname": "cost_per_liter",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Cost Per Liter (ETB)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_cost",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Total Fuel Cost (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "odometer_km",
+      "fieldtype": "Float",
+      "label": "Current Odometer (KM)"
+    },
+    {
+      "fieldname": "fuel_station",
+      "fieldtype": "Data",
+      "label": "Fuel Station Name / Station Code"
+    },
+    {
+      "fieldname": "cashier",
+      "fieldtype": "Link",
+      "label": "Disbursing Cashier (if petty cash)",
+      "options": "Cashier"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Fuel Management",
+  "name": "Fuel Log",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Dispatcher",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

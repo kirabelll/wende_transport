@@ -1,0 +1,128 @@
+{
+  "charts": [],
+  "content": "[{\"id\":\"heading_driver\",\"type\":\"header\",\"data\":{\"text\":\"Driver Operations & Performance\",\"level\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "users",
+  "indicator_color": "purple",
+  "is_hidden": 0,
+  "label": "Driver Management",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Drivers & Advances",
+      "link_count": 0,
+      "link_to": "Transport Employee",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Drivers Registry",
+      "link_count": 0,
+      "link_to": "Transport Employee",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Driver Advances",
+      "link_count": 0,
+      "link_to": "Driver Advance",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Driver Ledger Entries",
+      "link_count": 0,
+      "link_to": "Driver Ledger Entry",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Performance & Handover",
+      "link_count": 0,
+      "link_to": "Driver Score",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Driver Scores",
+      "link_count": 0,
+      "link_to": "Driver Score",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rewards & Penalties",
+      "link_count": 0,
+      "link_to": "Driver Reward Penalty",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Vehicle Handovers",
+      "link_count": 0,
+      "link_to": "Vehicle Handover",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    }
+  ],
+  "module": "Driver Management",
+  "name": "Driver Management",
+  "number_cards": [],
+  "parent_page": "Wende Transport",
+  "public": 1,
+
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 8.0,
+  "shortcuts": [
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "label": "Drivers",
+      "link_to": "Transport Employee",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "label": "Driver Advances",
+      "link_to": "Driver Advance",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "label": "Driver Scores",
+      "link_to": "Driver Score",
+      "type": "DocType"
+    }
+  ],
+  "title": "Driver Management"
+}

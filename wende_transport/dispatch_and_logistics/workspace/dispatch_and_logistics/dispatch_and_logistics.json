@@ -1,0 +1,138 @@
+{
+  "charts": [],
+  "content": "[{\"id\":\"heading_dispatch\",\"type\":\"header\",\"data\":{\"text\":\"Dispatch & Logistics\",\"level\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "navigation",
+  "indicator_color": "cyan",
+  "is_hidden": 0,
+  "label": "Dispatch & Logistics",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Orders & Rate Contracts",
+      "link_count": 0,
+      "link_to": "Customer Order",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Customer Orders",
+      "link_count": 0,
+      "link_to": "Customer Order",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Customers",
+      "link_count": 0,
+      "link_to": "Customer",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rate Contracts",
+      "link_count": 0,
+      "link_to": "Rate Contract",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Trips & Execution",
+      "link_count": 0,
+      "link_to": "Trip",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Trips Dispatch",
+      "link_count": 0,
+      "link_to": "Trip",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Trip Status History",
+      "link_count": 0,
+      "link_to": "Trip Status History",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Vehicle Swap Logs",
+      "link_count": 0,
+      "link_to": "Vehicle Swap Log",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Order Penalties",
+      "link_count": 0,
+      "link_to": "Order Penalty",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    }
+  ],
+  "module": "Dispatch and Logistics",
+  "name": "Dispatch & Logistics",
+  "number_cards": [],
+  "parent_page": "Wende Transport",
+  "public": 1,
+
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 2.0,
+  "shortcuts": [
+    {
+      "color": "Cyan",
+      "doc_view": "List",
+      "label": "Active Trips",
+      "link_to": "Trip",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "label": "Customer Orders",
+      "link_to": "Customer Order",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "label": "Customers",
+      "link_to": "Customer",
+      "type": "DocType"
+    }
+  ],
+  "title": "Dispatch & Logistics"
+}

@@ -1,0 +1,112 @@
+{
+  "actions": [],
+  "autoname": "format:EXP-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "contract_type",
+    "entity_name",
+    "entity_type",
+    "entity_id",
+    "contract_ref",
+    "column_break_exp",
+    "start_date",
+    "expiry_date",
+    "alert_before_days",
+    "status",
+    "notes"
+  ],
+  "fields": [
+    {
+      "default": "supplier",
+      "fieldname": "contract_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Contract Category",
+      "options": "supplier\ncustomer\nrental\nservice\ninsurance\nlease",
+      "reqd": 1
+    },
+    {
+      "fieldname": "entity_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Counterparty / Contractor Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "entity_type",
+      "fieldtype": "Data",
+      "label": "Counterparty Entity Type"
+    },
+    {
+      "fieldname": "entity_id",
+      "fieldtype": "Data",
+      "label": "Counterparty Record ID"
+    },
+    {
+      "fieldname": "contract_ref",
+      "fieldtype": "Data",
+      "label": "Contract Agreement Reference No."
+    },
+    {
+      "fieldname": "column_break_exp",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Effective Start Date"
+    },
+    {
+      "fieldname": "expiry_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Contract Expiration Date",
+      "reqd": 1
+    },
+    {
+      "default": "30",
+      "fieldname": "alert_before_days",
+      "fieldtype": "Int",
+      "label": "Alert Before (Days)"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nExpired\nRenewed"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Operations and Safety",
+  "name": "Contract Expiry",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

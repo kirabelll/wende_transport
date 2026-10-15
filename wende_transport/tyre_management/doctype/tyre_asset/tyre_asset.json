@@ -1,0 +1,203 @@
+{
+  "actions": [],
+  "autoname": "field:serial_number",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "tyre_details_section",
+    "serial_number",
+    "brand",
+    "size",
+    "pattern",
+    "status",
+    "condition",
+    "column_break_tyre",
+    "purchase_cost",
+    "purchase_date",
+    "supplier",
+    "retread_count",
+    "cost_per_km",
+    "fitment_section",
+    "current_vehicle",
+    "position",
+    "fitment_date",
+    "fitment_km",
+    "column_break_removal",
+    "removal_date",
+    "removal_km",
+    "total_km_run",
+    "first_vehicle",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "tyre_details_section",
+      "fieldtype": "Section Break",
+      "label": "Tyre Asset Specifications"
+    },
+    {
+      "fieldname": "serial_number",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Tyre Serial Number / DOT Code",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "brand",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Brand / Manufacturer"
+    },
+    {
+      "fieldname": "size",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Size Specification (e.g. 315/80 R22.5)"
+    },
+    {
+      "fieldname": "pattern",
+      "fieldtype": "Data",
+      "label": "Tread Pattern"
+    },
+    {
+      "default": "In Stock",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "In Stock\nFitted\nRemoved\nScrap\nRetread\nSold"
+    },
+    {
+      "default": "New",
+      "fieldname": "condition",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Condition",
+      "options": "New\nGood\nFair\nWorn\nScrap\nRetread"
+    },
+    {
+      "fieldname": "column_break_tyre",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "purchase_cost",
+      "fieldtype": "Currency",
+      "label": "Purchase Cost (ETB)"
+    },
+    {
+      "default": "Today",
+      "fieldname": "purchase_date",
+      "fieldtype": "Date",
+      "label": "Purchase Date"
+    },
+    {
+      "fieldname": "supplier",
+      "fieldtype": "Link",
+      "label": "Tyre Supplier",
+      "options": "Transport Supplier"
+    },
+    {
+      "default": "0",
+      "fieldname": "retread_count",
+      "fieldtype": "Int",
+      "label": "Retread Count"
+    },
+    {
+      "default": "0",
+      "fieldname": "cost_per_km",
+      "fieldtype": "Float",
+      "label": "Cost Per KM (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "fitment_section",
+      "fieldtype": "Section Break",
+      "label": "Vehicle Fitment & Wheel Position"
+    },
+    {
+      "fieldname": "current_vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Current Vehicle",
+      "options": "Vehicle"
+    },
+    {
+      "fieldname": "position",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Wheel Position",
+      "options": "FL\nFR\nRL1\nRL2\nRR1\nRR2\nSpare"
+    },
+    {
+      "fieldname": "fitment_date",
+      "fieldtype": "Date",
+      "label": "Fitment Date"
+    },
+    {
+      "fieldname": "fitment_km",
+      "fieldtype": "Float",
+      "label": "Odometer at Fitment (KM)"
+    },
+    {
+      "fieldname": "column_break_removal",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "removal_date",
+      "fieldtype": "Date",
+      "label": "Removal Date"
+    },
+    {
+      "fieldname": "removal_km",
+      "fieldtype": "Float",
+      "label": "Odometer at Removal (KM)"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_km_run",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Total Distance Run (KM)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "first_vehicle",
+      "fieldtype": "Link",
+      "label": "First Installed Vehicle",
+      "options": "Vehicle"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Tyre Management",
+  "name": "Tyre Asset",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "serial_number",
+  "sort_order": "ASC"
+}

@@ -1,0 +1,124 @@
+{
+  "actions": [],
+  "autoname": "format:SCORE-{driver}-{month}-{year}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "driver",
+    "month",
+    "year",
+    "trip_count",
+    "total_score",
+    "column_break_scores",
+    "trip_score",
+    "shortage_score",
+    "cycle_time_score",
+    "fuel_score",
+    "attendance_score",
+    "safety_score"
+  ],
+  "fields": [
+    {
+      "fieldname": "driver",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Driver",
+      "options": "Transport Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "month",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Month (1-12)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "year",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Year",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "trip_count",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Completed Trips"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_score",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Weighted Overall Score (0-100)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_scores",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "trip_score",
+      "fieldtype": "Float",
+      "label": "Tonnage / Trip Volume Score"
+    },
+    {
+      "default": "0",
+      "fieldname": "shortage_score",
+      "fieldtype": "Float",
+      "label": "Zero-Shortage Accuracy Score"
+    },
+    {
+      "default": "0",
+      "fieldname": "cycle_time_score",
+      "fieldtype": "Float",
+      "label": "Turnaround / Cycle Time Score"
+    },
+    {
+      "default": "0",
+      "fieldname": "fuel_score",
+      "fieldtype": "Float",
+      "label": "Fuel Efficiency Score"
+    },
+    {
+      "default": "0",
+      "fieldname": "attendance_score",
+      "fieldtype": "Float",
+      "label": "Attendance Score"
+    },
+    {
+      "default": "0",
+      "fieldname": "safety_score",
+      "fieldtype": "Float",
+      "label": "Accident-Free Safety Score"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Driver Management",
+  "name": "Driver Score",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

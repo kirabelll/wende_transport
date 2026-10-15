@@ -1,0 +1,147 @@
+{
+  "actions": [],
+  "autoname": "format:RTRP-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "rental_vehicle",
+    "customer",
+    "trip_date",
+    "status",
+    "column_break_rt",
+    "pickup_location",
+    "delivery_location",
+    "quantity_tons",
+    "financials_section",
+    "rate_per_ton",
+    "customer_revenue",
+    "column_break_margin",
+    "rental_payable",
+    "gross_margin",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "rental_vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Rental Vehicle",
+      "options": "Rental Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Customer",
+      "options": "Customer"
+    },
+    {
+      "default": "Today",
+      "fieldname": "trip_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Trip Date",
+      "reqd": 1
+    },
+    {
+      "default": "Completed",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Completed\nDispatched\nCancelled"
+    },
+    {
+      "fieldname": "column_break_rt",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "pickup_location",
+      "fieldtype": "Data",
+      "label": "Origin",
+      "reqd": 1
+    },
+    {
+      "fieldname": "delivery_location",
+      "fieldtype": "Data",
+      "label": "Destination",
+      "reqd": 1
+    },
+    {
+      "fieldname": "quantity_tons",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Delivered Tonnage",
+      "reqd": 1
+    },
+    {
+      "fieldname": "financials_section",
+      "fieldtype": "Section Break",
+      "label": "Revenue & Transporter Margin"
+    },
+    {
+      "fieldname": "rate_per_ton",
+      "fieldtype": "Currency",
+      "label": "Customer Billing Rate (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "customer_revenue",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Customer Revenue (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_margin",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "rental_payable",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Owner Payable (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "gross_margin",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Company Net Margin (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Rental Fleet",
+  "name": "Rental Trip",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

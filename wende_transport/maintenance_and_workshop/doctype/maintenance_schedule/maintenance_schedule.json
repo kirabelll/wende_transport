@@ -1,0 +1,140 @@
+{
+  "actions": [],
+  "autoname": "format:SCH-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "vehicle",
+    "maintenance_type",
+    "maintenance_class",
+    "status",
+    "column_break_sch",
+    "interval_km",
+    "interval_days",
+    "last_done_km",
+    "last_done_date",
+    "next_due_km",
+    "next_due_date",
+    "alert_before_km",
+    "alert_before_days",
+    "linked_work_order",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Vehicle",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "default": "oil_change",
+      "fieldname": "maintenance_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Service Type",
+      "options": "oil_change\ngearbox_oil\nhydraulic\ntire_rotation\nbrake_inspection\ncompressor\nannual_inspection\nclass_a\nclass_b\nclass_c\nclass_d\nengine_service\ndifferential\nfilter"
+    },
+    {
+      "fieldname": "maintenance_class",
+      "fieldtype": "Link",
+      "label": "Class Template",
+      "options": "Maintenance Class Template"
+    },
+    {
+      "default": "Upcoming",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Upcoming\nDue Soon\nOverdue\nCompleted"
+    },
+    {
+      "fieldname": "column_break_sch",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "interval_km",
+      "fieldtype": "Float",
+      "label": "Interval (KM)"
+    },
+    {
+      "fieldname": "interval_days",
+      "fieldtype": "Int",
+      "label": "Interval (Days)"
+    },
+    {
+      "fieldname": "last_done_km",
+      "fieldtype": "Float",
+      "label": "Last Done KM"
+    },
+    {
+      "fieldname": "last_done_date",
+      "fieldtype": "Date",
+      "label": "Last Done Date"
+    },
+    {
+      "fieldname": "next_due_km",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Next Due KM"
+    },
+    {
+      "fieldname": "next_due_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Next Due Date"
+    },
+    {
+      "default": "500",
+      "fieldname": "alert_before_km",
+      "fieldtype": "Float",
+      "label": "Alert Warning KM Before Due"
+    },
+    {
+      "default": "7",
+      "fieldname": "alert_before_days",
+      "fieldtype": "Int",
+      "label": "Alert Warning Days Before Due"
+    },
+    {
+      "fieldname": "linked_work_order",
+      "fieldtype": "Link",
+      "label": "Linked Work Order",
+      "options": "Work Order"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Maintenance and Workshop",
+  "name": "Maintenance Schedule",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

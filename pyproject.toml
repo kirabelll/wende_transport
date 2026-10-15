@@ -1,0 +1,22 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "wende_transport"
+authors = [
+    { name = "Wende Transport", email = "info@wendetransport.com"}
+]
+description = "Comprehensive Fleet, Logistics, Maintenance, Store, Cashier and Operations Management System for Frappe v15"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    "frappe>=15.0.0",
+    "requests>=2.28.0",
+    "python-dateutil>=2.8.2"
+]
+
+[project.urls]
+Homepage = "https://github.com/wendetransport/wende_transport"
+Repository = "https://github.com/wendetransport/wende_transport.git"

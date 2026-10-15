@@ -1,0 +1,89 @@
+{
+  "actions": [],
+  "autoname": "field:class_name",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "class_name",
+    "label",
+    "default_interval_km",
+    "default_interval_days",
+    "is_active",
+    "column_break_mct",
+    "description",
+    "checklist_items"
+  ],
+  "fields": [
+    {
+      "fieldname": "class_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Class Code (A, B, C, D)",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "label",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Class Description (e.g. Class A - Inspection & Lube)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "default_interval_km",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Default Interval (KM)"
+    },
+    {
+      "fieldname": "default_interval_days",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Default Interval (Days)"
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active"
+    },
+    {
+      "fieldname": "column_break_mct",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "checklist_items",
+      "fieldtype": "Small Text",
+      "label": "Inspection Checklist Items (JSON/List)"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Maintenance and Workshop",
+  "name": "Maintenance Class Template",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "class_name",
+  "sort_order": "ASC"
+}

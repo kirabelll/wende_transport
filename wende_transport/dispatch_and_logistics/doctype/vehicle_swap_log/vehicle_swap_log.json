@@ -1,0 +1,93 @@
+{
+  "actions": [],
+  "autoname": "format:SWAP-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "trip",
+    "from_vehicle",
+    "to_vehicle",
+    "column_break_swap",
+    "reason",
+    "swapped_by",
+    "approved_by",
+    "swapped_at"
+  ],
+  "fields": [
+    {
+      "fieldname": "trip",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Trip",
+      "options": "Trip",
+      "reqd": 1
+    },
+    {
+      "fieldname": "from_vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Original Vehicle (Broken Down)",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "to_vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Replacement Vehicle",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_swap",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "reason",
+      "fieldtype": "Small Text",
+      "label": "Swap Reason",
+      "reqd": 1
+    },
+    {
+      "fieldname": "swapped_by",
+      "fieldtype": "Data",
+      "label": "Swapped By"
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Data",
+      "label": "Approved By"
+    },
+    {
+      "default": "Now",
+      "fieldname": "swapped_at",
+      "fieldtype": "Datetime",
+      "label": "Swap Timestamp"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Dispatch and Logistics",
+  "name": "Vehicle Swap Log",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

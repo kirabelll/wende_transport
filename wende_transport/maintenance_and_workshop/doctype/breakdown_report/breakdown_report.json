@@ -1,0 +1,129 @@
+{
+  "actions": [],
+  "autoname": "format:BRK-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "vehicle",
+    "reported_by",
+    "reported_at",
+    "location",
+    "status",
+    "column_break_brk",
+    "description",
+    "photos",
+    "video_url",
+    "approved_by",
+    "rejection_reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Vehicle",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reported_by",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Reported By (Driver/Technician)",
+      "options": "Transport Employee",
+      "reqd": 1
+    },
+    {
+      "default": "Now",
+      "fieldname": "reported_at",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Reported At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Breakdown Location / Highway KM",
+      "reqd": 1
+    },
+    {
+      "default": "Pending",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Pending\nApproved\nRejected\nResolved"
+    },
+    {
+      "fieldname": "column_break_brk",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Fault / Failure Description",
+      "reqd": 1
+    },
+    {
+      "fieldname": "photos",
+      "fieldtype": "Attach Image",
+      "label": "Breakdown Photo"
+    },
+    {
+      "fieldname": "video_url",
+      "fieldtype": "Data",
+      "label": "Video URL / Cloud Link"
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Data",
+      "label": "Approved By"
+    },
+    {
+      "depends_on": "eval:doc.status=='Rejected'",
+      "fieldname": "rejection_reason",
+      "fieldtype": "Small Text",
+      "label": "Rejection Reason"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Maintenance and Workshop",
+  "name": "Breakdown Report",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Driver",
+      "share": 0,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

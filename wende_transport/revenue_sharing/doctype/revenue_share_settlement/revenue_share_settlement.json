@@ -1,0 +1,145 @@
+{
+  "actions": [],
+  "autoname": "format:RSS-{contract}-{month}-{year}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "contract",
+    "month",
+    "year",
+    "status",
+    "column_break_rss",
+    "total_trips",
+    "total_revenue",
+    "total_expenses",
+    "net_income",
+    "owner_payable",
+    "company_share",
+    "approved_by",
+    "paid_at",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "contract",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Contract",
+      "options": "Revenue Share Contract",
+      "reqd": 1
+    },
+    {
+      "fieldname": "month",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Settlement Month",
+      "reqd": 1
+    },
+    {
+      "fieldname": "year",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Settlement Year",
+      "reqd": 1
+    },
+    {
+      "default": "Draft",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Draft\nApproved\nPaid"
+    },
+    {
+      "fieldname": "column_break_rss",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_trips",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Total Settled Trips",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "total_revenue",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Gross Revenue (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "total_expenses",
+      "fieldtype": "Currency",
+      "label": "Total Deductible Expenses (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "net_income",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Net Profit (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "owner_payable",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Tractor Owner Payable (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "company_share",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Company Trailer Profit (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Data",
+      "label": "Approved By"
+    },
+    {
+      "fieldname": "paid_at",
+      "fieldtype": "Datetime",
+      "label": "Disbursement Timestamp"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Revenue Sharing",
+  "name": "Revenue Share Settlement",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

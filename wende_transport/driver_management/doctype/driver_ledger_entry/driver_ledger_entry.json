@@ -1,0 +1,110 @@
+{
+  "actions": [],
+  "autoname": "format:LED-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "driver",
+    "date",
+    "type",
+    "category",
+    "column_break_led",
+    "amount",
+    "balance",
+    "reference_type",
+    "reference_id",
+    "description"
+  ],
+  "fields": [
+    {
+      "fieldname": "driver",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Driver",
+      "options": "Transport Employee",
+      "reqd": 1
+    },
+    {
+      "default": "Today",
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Transaction Type",
+      "options": "Credit\nDebit",
+      "reqd": 1
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Category",
+      "options": "Salary\nPer Diem\nIncentive\nAdvance\nShortage\nFine\nLoan\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_led",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Amount (ETB)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "balance",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Running Balance (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "reference_type",
+      "fieldtype": "Data",
+      "label": "Reference DocType"
+    },
+    {
+      "fieldname": "reference_id",
+      "fieldtype": "Data",
+      "label": "Reference ID"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Driver Management",
+  "name": "Driver Ledger Entry",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

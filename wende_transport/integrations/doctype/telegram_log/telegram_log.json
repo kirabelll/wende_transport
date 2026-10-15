@@ -1,0 +1,93 @@
+{
+  "actions": [],
+  "autoname": "format:TLOG-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "level",
+    "category",
+    "title",
+    "chat_id",
+    "column_break_tlog",
+    "success",
+    "error_message",
+    "message"
+  ],
+  "fields": [
+    {
+      "default": "info",
+      "fieldname": "level",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Log Level",
+      "options": "critical\nurgent\nwarning\ninfo"
+    },
+    {
+      "default": "trip",
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Category",
+      "options": "compliance\nmaintenance\ntrip\norder\nbreakdown\ninventory\npayroll\nsystem"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Notification Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "chat_id",
+      "fieldtype": "Data",
+      "label": "Telegram Chat / Group ID"
+    },
+    {
+      "fieldname": "column_break_tlog",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "success",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Sent Successfully"
+    },
+    {
+      "fieldname": "error_message",
+      "fieldtype": "Small Text",
+      "label": "API Error Message"
+    },
+    {
+      "fieldname": "message",
+      "fieldtype": "Small Text",
+      "label": "Dispatched Payload Message",
+      "reqd": 1
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Integrations",
+  "name": "Telegram Log",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

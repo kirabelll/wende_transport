@@ -1,0 +1,98 @@
+{
+  "actions": [],
+  "autoname": "format:FSTD-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "route",
+    "vehicle_category",
+    "vehicle",
+    "is_active",
+    "column_break_fstd",
+    "standard_liters",
+    "standard_km_per_liter",
+    "supplier",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "route",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Route Name (e.g. Mugher -> Addis Ababa)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "vehicle_category",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Vehicle Category",
+      "options": "Vehicle Category"
+    },
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "label": "Specific Vehicle (Optional Override)",
+      "options": "Vehicle"
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Is Active"
+    },
+    {
+      "fieldname": "column_break_fstd",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "standard_liters",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Standard Target Fuel Consumption (Liters)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "standard_km_per_liter",
+      "fieldtype": "Float",
+      "label": "Expected KM Per Liter"
+    },
+    {
+      "fieldname": "supplier",
+      "fieldtype": "Link",
+      "label": "Contracted Fuel Supplier",
+      "options": "Transport Supplier"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Fuel Management",
+  "name": "Fuel Standard",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

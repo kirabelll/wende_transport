@@ -1,0 +1,108 @@
+{
+  "charts": [],
+  "content": "[{\"id\":\"heading_rental\",\"type\":\"header\",\"data\":{\"text\":\"Rental & Outsourced Fleet\",\"level\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "truck",
+  "indicator_color": "blue",
+  "is_hidden": 0,
+  "label": "Rental Fleet",
+  "links": [
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rental Partners & Fleet",
+      "link_count": 0,
+      "link_to": "Rental Owner",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rental Owners",
+      "link_count": 0,
+      "link_to": "Rental Owner",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rental Vehicles",
+      "link_count": 0,
+      "link_to": "Rental Vehicle",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Trips & Settlements",
+      "link_count": 0,
+      "link_to": "Rental Trip",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Card Break"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rental Trips",
+      "link_count": 0,
+      "link_to": "Rental Trip",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "hidden": 0,
+      "is_query_report": 0,
+      "label": "Rental Payments",
+      "link_count": 0,
+      "link_to": "Rental Payment",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    }
+  ],
+  "module": "Rental Fleet",
+  "name": "Rental Fleet",
+  "number_cards": [],
+  "parent_page": "Wende Transport",
+  "public": 1,
+
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 12.0,
+  "shortcuts": [
+    {
+      "color": "Blue",
+      "doc_view": "List",
+      "label": "Rental Vehicles",
+      "link_to": "Rental Vehicle",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "doc_view": "List",
+      "label": "Rental Trips",
+      "link_to": "Rental Trip",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "doc_view": "List",
+      "label": "Rental Owners",
+      "link_to": "Rental Owner",
+      "type": "DocType"
+    }
+  ],
+  "title": "Rental Fleet"
+}

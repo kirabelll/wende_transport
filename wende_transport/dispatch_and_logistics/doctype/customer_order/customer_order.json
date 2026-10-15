@@ -1,0 +1,305 @@
+{
+  "actions": [],
+  "autoname": "format:ORD-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "order_section",
+    "customer",
+    "order_type",
+    "order_date",
+    "required_delivery_date",
+    "status",
+    "column_break_ord1",
+    "item_product",
+    "material_type",
+    "route",
+    "delivery_site",
+    "contract_ref",
+    "po_number",
+    "quantities_and_rates_section",
+    "quantity",
+    "base_rate",
+    "adjusted_rate",
+    "total_amount",
+    "column_break_rates",
+    "total_delivered",
+    "total_trips",
+    "remaining_qty",
+    "payment_type",
+    "locations_section",
+    "pickup_location",
+    "pickup_contact",
+    "pickup_phone",
+    "column_break_loc",
+    "delivery_location",
+    "delivery_contact",
+    "delivery_phone",
+    "delivery_gps",
+    "delivery_address",
+    "unloading_instructions",
+    "notes_section",
+    "rejection_reason",
+    "notes",
+    "attachments"
+  ],
+  "fields": [
+    {
+      "fieldname": "order_section",
+      "fieldtype": "Section Break",
+      "label": "Order Overview"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Customer",
+      "options": "Customer",
+      "reqd": 1
+    },
+    {
+      "default": "Cement",
+      "fieldname": "order_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Order Type",
+      "options": "Cement\nGravel\nGeneral Freight"
+    },
+    {
+      "default": "Today",
+      "fieldname": "order_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Order Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "required_delivery_date",
+      "fieldtype": "Date",
+      "label": "Required Delivery Date"
+    },
+    {
+      "default": "Submitted",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Submitted\nApproved\nScheduled\nDispatched\nIn Transit\nDelivered\nInvoiced\nPaid\nRejected"
+    },
+    {
+      "fieldname": "column_break_ord1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "item_product",
+      "fieldtype": "Data",
+      "label": "Product / Material (e.g. OPC 42.5, Aggregate 20mm)"
+    },
+    {
+      "fieldname": "material_type",
+      "fieldtype": "Data",
+      "label": "Material Specifications"
+    },
+    {
+      "fieldname": "route",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Route Name (e.g. Mugher -> Addis Ababa)"
+    },
+    {
+      "fieldname": "delivery_site",
+      "fieldtype": "Data",
+      "label": "Specific Delivery Site"
+    },
+    {
+      "fieldname": "contract_ref",
+      "fieldtype": "Link",
+      "label": "Rate Contract Reference",
+      "options": "Rate Contract"
+    },
+    {
+      "fieldname": "po_number",
+      "fieldtype": "Data",
+      "label": "Customer PO Number"
+    },
+    {
+      "fieldname": "quantities_and_rates_section",
+      "fieldtype": "Section Break",
+      "label": "Quantities, Rates & Execution"
+    },
+    {
+      "fieldname": "quantity",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Order Quantity (Tons)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "base_rate",
+      "fieldtype": "Currency",
+      "label": "Base Rate Per Ton (ETB)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "adjusted_rate",
+      "fieldtype": "Currency",
+      "label": "Adjusted Rate Per Ton (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Total Order Value (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_rates",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_delivered",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Total Delivered (Tons)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "total_trips",
+      "fieldtype": "Int",
+      "label": "Linked Trips Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "remaining_qty",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Remaining Quantity (Tons)",
+      "read_only": 1
+    },
+    {
+      "default": "Cash",
+      "fieldname": "payment_type",
+      "fieldtype": "Select",
+      "label": "Payment Terms",
+      "options": "Cash\nCredit\nMonthly"
+    },
+    {
+      "fieldname": "locations_section",
+      "fieldtype": "Section Break",
+      "label": "Loading & Delivery Locations"
+    },
+    {
+      "fieldname": "pickup_location",
+      "fieldtype": "Data",
+      "label": "Loading / Origin Point",
+      "reqd": 1
+    },
+    {
+      "fieldname": "pickup_contact",
+      "fieldtype": "Data",
+      "label": "Loading Point Contact Person"
+    },
+    {
+      "fieldname": "pickup_phone",
+      "fieldtype": "Data",
+      "label": "Loading Point Phone"
+    },
+    {
+      "fieldname": "column_break_loc",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "delivery_location",
+      "fieldtype": "Data",
+      "label": "Delivery / Unloading Point",
+      "reqd": 1
+    },
+    {
+      "fieldname": "delivery_contact",
+      "fieldtype": "Data",
+      "label": "Site Contact Person"
+    },
+    {
+      "fieldname": "delivery_phone",
+      "fieldtype": "Data",
+      "label": "Site Contact Phone"
+    },
+    {
+      "fieldname": "delivery_gps",
+      "fieldtype": "Data",
+      "label": "Site GPS Coordinates"
+    },
+    {
+      "fieldname": "delivery_address",
+      "fieldtype": "Small Text",
+      "label": "Full Delivery Address"
+    },
+    {
+      "fieldname": "unloading_instructions",
+      "fieldtype": "Small Text",
+      "label": "Unloading Instructions"
+    },
+    {
+      "fieldname": "notes_section",
+      "fieldtype": "Section Break",
+      "label": "Rejections & Notes"
+    },
+    {
+      "fieldname": "rejection_reason",
+      "fieldtype": "Small Text",
+      "label": "Rejection Reason"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "attachments",
+      "fieldtype": "Attach",
+      "label": "Attached Documents / PO"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Dispatch and Logistics",
+  "name": "Customer Order",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Dispatcher",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

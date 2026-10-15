@@ -1,0 +1,123 @@
+{
+  "actions": [],
+  "autoname": "field:garage_name",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "garage_name",
+    "contact_person",
+    "phone",
+    "address",
+    "speciality",
+    "column_break_gar",
+    "is_internal",
+    "rating",
+    "status",
+    "total_jobs_done",
+    "avg_completion_days",
+    "total_spent"
+  ],
+  "fields": [
+    {
+      "fieldname": "garage_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Garage Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "contact_person",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Contact Person"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Phone Number"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Garage Address / Location"
+    },
+    {
+      "fieldname": "speciality",
+      "fieldtype": "Data",
+      "label": "Speciality (e.g. Engine Overhaul, Electrical, Hydraulics)"
+    },
+    {
+      "fieldname": "column_break_gar",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_internal",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Company Internal Workshop"
+    },
+    {
+      "default": "5",
+      "fieldname": "rating",
+      "fieldtype": "Float",
+      "label": "Quality Rating (1-5)"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nInactive"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_jobs_done",
+      "fieldtype": "Int",
+      "label": "Total Jobs Done",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "avg_completion_days",
+      "fieldtype": "Float",
+      "label": "Avg Turnaround (Days)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "total_spent",
+      "fieldtype": "Currency",
+      "label": "Total Spent (ETB)",
+      "read_only": 1
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Maintenance and Workshop",
+  "name": "Garage",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "garage_name",
+  "sort_order": "ASC"
+}

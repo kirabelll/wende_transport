@@ -1,0 +1,223 @@
+{
+  "actions": [],
+  "autoname": "format:ACC-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "accident_section",
+    "vehicle",
+    "driver",
+    "accident_date",
+    "location",
+    "responsibility",
+    "column_break_acc",
+    "police_ref_number",
+    "trailer_id",
+    "repair_status",
+    "work_order",
+    "damage_and_insurance_section",
+    "damage_estimate",
+    "actual_repair_cost",
+    "insurance_claim_ref",
+    "insurance_claim_status",
+    "column_break_claim",
+    "insurance_claim_amount",
+    "insurance_paid_amount",
+    "third_party_section",
+    "third_party_name",
+    "third_party_phone",
+    "third_party_vehicle",
+    "third_party_insurer",
+    "narrative_section",
+    "description",
+    "photos",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "accident_section",
+      "fieldtype": "Section Break",
+      "label": "Incident & Vehicle Details"
+    },
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Vehicle",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "driver",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Driver on Duty",
+      "options": "Transport Employee"
+    },
+    {
+      "default": "Today",
+      "fieldname": "accident_date",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Incident Date & Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Accident Location",
+      "reqd": 1
+    },
+    {
+      "default": "our_driver",
+      "fieldname": "responsibility",
+      "fieldtype": "Select",
+      "label": "Liability / Responsibility",
+      "options": "our_driver\nthird_party\nshared\nunknown"
+    },
+    {
+      "fieldname": "column_break_acc",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "police_ref_number",
+      "fieldtype": "Data",
+      "label": "Police Report Reference Number"
+    },
+    {
+      "fieldname": "trailer_id",
+      "fieldtype": "Data",
+      "label": "Trailer Plate (if paired)"
+    },
+    {
+      "default": "Pending",
+      "fieldname": "repair_status",
+      "fieldtype": "Select",
+      "label": "Vehicle Repair Status",
+      "options": "Pending\nIn Progress\nCompleted"
+    },
+    {
+      "fieldname": "work_order",
+      "fieldtype": "Link",
+      "label": "Linked Repair Work Order",
+      "options": "Work Order"
+    },
+    {
+      "fieldname": "damage_and_insurance_section",
+      "fieldtype": "Section Break",
+      "label": "Damage Assessment & Insurance Claims"
+    },
+    {
+      "default": "0",
+      "fieldname": "damage_estimate",
+      "fieldtype": "Currency",
+      "label": "Initial Damage Estimate (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "actual_repair_cost",
+      "fieldtype": "Currency",
+      "label": "Actual Repair Invoice Total (ETB)"
+    },
+    {
+      "fieldname": "insurance_claim_ref",
+      "fieldtype": "Data",
+      "label": "Insurance Claim File Number"
+    },
+    {
+      "default": "Pending",
+      "fieldname": "insurance_claim_status",
+      "fieldtype": "Select",
+      "label": "Claim Status",
+      "options": "Pending\nSubmitted\nApproved\nRejected\nSettled"
+    },
+    {
+      "fieldname": "column_break_claim",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "insurance_claim_amount",
+      "fieldtype": "Currency",
+      "label": "Claimed Amount (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "insurance_paid_amount",
+      "fieldtype": "Currency",
+      "label": "Settled Indemnity Paid (ETB)"
+    },
+    {
+      "fieldname": "third_party_section",
+      "fieldtype": "Section Break",
+      "label": "Third Party Information"
+    },
+    {
+      "fieldname": "third_party_name",
+      "fieldtype": "Data",
+      "label": "Third Party Driver / Owner Name"
+    },
+    {
+      "fieldname": "third_party_phone",
+      "fieldtype": "Data",
+      "label": "Third Party Contact Phone"
+    },
+    {
+      "fieldname": "third_party_vehicle",
+      "fieldtype": "Data",
+      "label": "Third Party Vehicle Plate / Model"
+    },
+    {
+      "fieldname": "third_party_insurer",
+      "fieldtype": "Data",
+      "label": "Third Party Insurer"
+    },
+    {
+      "fieldname": "narrative_section",
+      "fieldtype": "Section Break",
+      "label": "Incident Narrative & Visuals"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Incident Circumstances & Scene Report",
+      "reqd": 1
+    },
+    {
+      "fieldname": "photos",
+      "fieldtype": "Attach Image",
+      "label": "Incident Scene Photo"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Investigator Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Operations and Safety",
+  "name": "Accident Record",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

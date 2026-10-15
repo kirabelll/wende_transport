@@ -1,0 +1,508 @@
+{
+  "actions": [],
+  "autoname": "format:TRP-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "trip_overview_section",
+    "order",
+    "customer",
+    "order_type",
+    "trip_date",
+    "status",
+    "column_break_fleet",
+    "vehicle",
+    "driver",
+    "helper",
+    "locations_and_quantities_section",
+    "pickup_location",
+    "delivery_location",
+    "planned_quantity_tons",
+    "rate_per_ton",
+    "column_break_execution",
+    "loaded_quantity_tons",
+    "delivered_quantity_tons",
+    "shortage",
+    "revenue",
+    "deductions_and_shortage_section",
+    "shortage_deduction",
+    "customer_deducted",
+    "customer_deduction_amount",
+    "driver_penalty_amount",
+    "column_break_advances",
+    "driver_advance_given",
+    "fuel_cost",
+    "pod_and_documents_section",
+    "pod_document",
+    "pod_signature",
+    "pod_url",
+    "weighbridge_slip",
+    "column_break_pod_status",
+    "delivery_confirmed_at",
+    "delivery_confirmed_by",
+    "customer_confirmation_status",
+    "customer_dispute_reason",
+    "cycle_timestamps_section",
+    "loading_start_time",
+    "loading_end_time",
+    "departure_time",
+    "column_break_times",
+    "arrival_at_delivery",
+    "unloading_start_time",
+    "unloading_end_time",
+    "total_cycle_minutes",
+    "gps_telematics_section",
+    "gps_arrival_at_loading",
+    "gps_arrival_at_loading_time",
+    "gps_loading_completion_time",
+    "column_break_gps",
+    "gps_arrival_at_unloading",
+    "gps_arrival_at_unloading_time",
+    "gps_unloading_exit_time",
+    "unloading_duration_minutes",
+    "trip_cost_allocation_section",
+    "allocated_fuel_cost",
+    "allocated_maintenance_cost",
+    "allocated_depreciation_cost",
+    "allocated_driver_cost",
+    "column_break_profit",
+    "total_trip_cost",
+    "profit_per_trip",
+    "notes_section",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "trip_overview_section",
+      "fieldtype": "Section Break",
+      "label": "Trip Overview"
+    },
+    {
+      "fieldname": "order",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Customer Order",
+      "options": "Customer Order"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Customer",
+      "options": "Customer"
+    },
+    {
+      "default": "Cement",
+      "fieldname": "order_type",
+      "fieldtype": "Select",
+      "label": "Order Type",
+      "options": "Cement\nGravel\nGeneral Freight"
+    },
+    {
+      "default": "Today",
+      "fieldname": "trip_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Trip Date",
+      "reqd": 1
+    },
+    {
+      "default": "Planned",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Planned\nDispatched\nLoading\nIn Transit\nDelivering\nCompleted\nCancelled"
+    },
+    {
+      "fieldname": "column_break_fleet",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Assigned Vehicle",
+      "options": "Vehicle",
+      "reqd": 1
+    },
+    {
+      "fieldname": "driver",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Assigned Driver",
+      "options": "Transport Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "helper",
+      "fieldtype": "Link",
+      "label": "Assistant / Helper",
+      "options": "Transport Employee"
+    },
+    {
+      "fieldname": "locations_and_quantities_section",
+      "fieldtype": "Section Break",
+      "label": "Locations & Tonnage"
+    },
+    {
+      "fieldname": "pickup_location",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Loading Origin",
+      "reqd": 1
+    },
+    {
+      "fieldname": "delivery_location",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Delivery Destination",
+      "reqd": 1
+    },
+    {
+      "fieldname": "planned_quantity_tons",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Planned Tonnage",
+      "reqd": 1
+    },
+    {
+      "fieldname": "rate_per_ton",
+      "fieldtype": "Currency",
+      "label": "Rate Per Ton (ETB)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_execution",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "loaded_quantity_tons",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Loaded Tonnage (Origin Slip)"
+    },
+    {
+      "fieldname": "delivered_quantity_tons",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Delivered Tonnage (Destination POD)"
+    },
+    {
+      "default": "0",
+      "fieldname": "shortage",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Quantity Shortage (Tons)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "revenue",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Trip Revenue (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "deductions_and_shortage_section",
+      "fieldtype": "Section Break",
+      "label": "Shortage Penalties & Customer Deductions"
+    },
+    {
+      "default": "0",
+      "fieldname": "shortage_deduction",
+      "fieldtype": "Currency",
+      "label": "Shortage Value (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "customer_deducted",
+      "fieldtype": "Check",
+      "label": "Customer Deducted for Shortage"
+    },
+    {
+      "default": "0",
+      "fieldname": "customer_deduction_amount",
+      "fieldtype": "Currency",
+      "label": "Customer Deduction Amount (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "driver_penalty_amount",
+      "fieldtype": "Currency",
+      "label": "Driver Penalty Amount (ETB)"
+    },
+    {
+      "fieldname": "column_break_advances",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "driver_advance_given",
+      "fieldtype": "Currency",
+      "label": "Driver Advance Disbursed (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "fuel_cost",
+      "fieldtype": "Currency",
+      "label": "Trip Fuel Expenses (ETB)"
+    },
+    {
+      "fieldname": "pod_and_documents_section",
+      "fieldtype": "Section Break",
+      "label": "Proof of Delivery (POD) & Documents"
+    },
+    {
+      "fieldname": "pod_document",
+      "fieldtype": "Attach",
+      "label": "Signed Proof of Delivery (POD) File"
+    },
+    {
+      "fieldname": "pod_signature",
+      "fieldtype": "Attach Image",
+      "label": "Digital Signature"
+    },
+    {
+      "fieldname": "pod_url",
+      "fieldtype": "Data",
+      "label": "External POD URL / Storage Link"
+    },
+    {
+      "fieldname": "weighbridge_slip",
+      "fieldtype": "Attach",
+      "label": "Weighbridge Loading Slip"
+    },
+    {
+      "fieldname": "column_break_pod_status",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "delivery_confirmed_at",
+      "fieldtype": "Datetime",
+      "label": "Delivery Confirmed At"
+    },
+    {
+      "fieldname": "delivery_confirmed_by",
+      "fieldtype": "Data",
+      "label": "Delivery Confirmed By"
+    },
+    {
+      "default": "Pending",
+      "fieldname": "customer_confirmation_status",
+      "fieldtype": "Select",
+      "label": "Customer Confirmation",
+      "options": "Pending\nConfirmed\nDisputed"
+    },
+    {
+      "depends_on": "eval:doc.customer_confirmation_status=='Disputed'",
+      "fieldname": "customer_dispute_reason",
+      "fieldtype": "Small Text",
+      "label": "Dispute Reason"
+    },
+    {
+      "fieldname": "cycle_timestamps_section",
+      "fieldtype": "Section Break",
+      "label": "Cycle Timestamps & Turnaround"
+    },
+    {
+      "fieldname": "loading_start_time",
+      "fieldtype": "Datetime",
+      "label": "Loading Start Time"
+    },
+    {
+      "fieldname": "loading_end_time",
+      "fieldtype": "Datetime",
+      "label": "Loading End Time"
+    },
+    {
+      "fieldname": "departure_time",
+      "fieldtype": "Datetime",
+      "label": "Departure from Origin"
+    },
+    {
+      "fieldname": "column_break_times",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "arrival_at_delivery",
+      "fieldtype": "Datetime",
+      "label": "Arrival at Site"
+    },
+    {
+      "fieldname": "unloading_start_time",
+      "fieldtype": "Datetime",
+      "label": "Unloading Start Time"
+    },
+    {
+      "fieldname": "unloading_end_time",
+      "fieldtype": "Datetime",
+      "label": "Unloading End Time"
+    },
+    {
+      "fieldname": "total_cycle_minutes",
+      "fieldtype": "Int",
+      "label": "Total Cycle (Minutes)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "gps_telematics_section",
+      "fieldtype": "Section Break",
+      "label": "GPS Telematics Auto-Capture"
+    },
+    {
+      "fieldname": "gps_arrival_at_loading",
+      "fieldtype": "Data",
+      "label": "GPS Arrival at Loading (Lat,Lng)"
+    },
+    {
+      "fieldname": "gps_arrival_at_loading_time",
+      "fieldtype": "Datetime",
+      "label": "GPS Arrival at Loading Time"
+    },
+    {
+      "fieldname": "gps_loading_completion_time",
+      "fieldtype": "Datetime",
+      "label": "GPS Loading Completion Time"
+    },
+    {
+      "fieldname": "column_break_gps",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "gps_arrival_at_unloading",
+      "fieldtype": "Data",
+      "label": "GPS Arrival at Unloading (Lat,Lng)"
+    },
+    {
+      "fieldname": "gps_arrival_at_unloading_time",
+      "fieldtype": "Datetime",
+      "label": "GPS Arrival at Unloading Time"
+    },
+    {
+      "fieldname": "gps_unloading_exit_time",
+      "fieldtype": "Datetime",
+      "label": "GPS Site Exit Time"
+    },
+    {
+      "fieldname": "unloading_duration_minutes",
+      "fieldtype": "Int",
+      "label": "Unloading Duration (Mins)"
+    },
+    {
+      "fieldname": "trip_cost_allocation_section",
+      "fieldtype": "Section Break",
+      "label": "Cost Allocation & Trip Profitability"
+    },
+    {
+      "default": "0",
+      "fieldname": "allocated_fuel_cost",
+      "fieldtype": "Currency",
+      "label": "Allocated Fuel Cost"
+    },
+    {
+      "default": "0",
+      "fieldname": "allocated_maintenance_cost",
+      "fieldtype": "Currency",
+      "label": "Allocated Maintenance Cost"
+    },
+    {
+      "default": "0",
+      "fieldname": "allocated_depreciation_cost",
+      "fieldtype": "Currency",
+      "label": "Allocated Depreciation Cost"
+    },
+    {
+      "default": "0",
+      "fieldname": "allocated_driver_cost",
+      "fieldtype": "Currency",
+      "label": "Allocated Driver Cost"
+    },
+    {
+      "fieldname": "column_break_profit",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_trip_cost",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Total Operating Cost",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "profit_per_trip",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Net Trip Profit (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes_section",
+      "fieldtype": "Section Break",
+      "label": "Remarks"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Dispatch and Logistics",
+  "name": "Trip",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Dispatcher",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 0,
+      "delete": 0,
+      "email": 0,
+      "export": 0,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Driver",
+      "share": 0,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

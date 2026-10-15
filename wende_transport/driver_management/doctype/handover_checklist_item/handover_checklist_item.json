@@ -1,0 +1,71 @@
+{
+  "actions": [],
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "item_name",
+    "part_number",
+    "serial_number",
+    "quantity",
+    "status",
+    "remarks",
+    "photo"
+  ],
+  "fields": [
+    {
+      "fieldname": "item_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Equipment / Component Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "part_number",
+      "fieldtype": "Data",
+      "label": "Part Number"
+    },
+    {
+      "fieldname": "serial_number",
+      "fieldtype": "Data",
+      "label": "Serial Number"
+    },
+    {
+      "default": "1",
+      "fieldname": "quantity",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Quantity"
+    },
+    {
+      "default": "Good",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Condition Status",
+      "options": "Good\nDamaged\nMissing\nNeeds Replacement",
+      "reqd": 1
+    },
+    {
+      "fieldname": "remarks",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Remarks / Defect Notes"
+    },
+    {
+      "fieldname": "photo",
+      "fieldtype": "Attach Image",
+      "label": "Photo"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Driver Management",
+  "name": "Handover Checklist Item",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

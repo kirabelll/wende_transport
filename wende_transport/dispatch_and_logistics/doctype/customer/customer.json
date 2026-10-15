@@ -1,0 +1,168 @@
+{
+  "actions": [],
+  "autoname": "field:company_name",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company_name",
+    "contact_name",
+    "phone",
+    "email",
+    "address",
+    "status",
+    "column_break_cust",
+    "payment_type",
+    "credit_limit",
+    "credit_days",
+    "tax_number",
+    "vat_registered",
+    "credit_control_section",
+    "outstanding_balance",
+    "overdue_amount",
+    "dispatch_blocked",
+    "block_reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "company_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Company / Customer Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "contact_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Contact Person"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Phone Number",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email Address"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Office / Site Address"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nInactive\nSuspended"
+    },
+    {
+      "fieldname": "column_break_cust",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Cash",
+      "fieldname": "payment_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Payment Terms",
+      "options": "Cash\nCredit\nMonthly"
+    },
+    {
+      "default": "0",
+      "fieldname": "credit_limit",
+      "fieldtype": "Currency",
+      "label": "Credit Limit (ETB)"
+    },
+    {
+      "default": "30",
+      "fieldname": "credit_days",
+      "fieldtype": "Int",
+      "label": "Credit Terms (Days)"
+    },
+    {
+      "fieldname": "tax_number",
+      "fieldtype": "Data",
+      "label": "Taxpayer Identification (TIN)"
+    },
+    {
+      "default": "0",
+      "fieldname": "vat_registered",
+      "fieldtype": "Check",
+      "label": "VAT Registered"
+    },
+    {
+      "fieldname": "credit_control_section",
+      "fieldtype": "Section Break",
+      "label": "Credit Exposure & Dispatch Controls"
+    },
+    {
+      "default": "0",
+      "fieldname": "outstanding_balance",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Outstanding Balance (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "overdue_amount",
+      "fieldtype": "Currency",
+      "label": "Overdue Amount (ETB)"
+    },
+    {
+      "default": "0",
+      "fieldname": "dispatch_blocked",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Dispatch Blocked"
+    },
+    {
+      "fieldname": "block_reason",
+      "fieldtype": "Small Text",
+      "label": "Block Reason"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Dispatch and Logistics",
+  "name": "Customer",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Dispatcher",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "company_name",
+  "sort_order": "ASC"
+}

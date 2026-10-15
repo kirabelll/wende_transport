@@ -1,0 +1,119 @@
+{
+  "actions": [],
+  "autoname": "format:PEN-{YYYY}-{#####}",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "order",
+    "trip",
+    "type",
+    "amount",
+    "status",
+    "column_break_pen",
+    "quantity_affected",
+    "rate_applied",
+    "description",
+    "approved_by",
+    "waived_by",
+    "waived_reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "order",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Customer Order",
+      "options": "Customer Order",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trip",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Linked Trip",
+      "options": "Trip"
+    },
+    {
+      "default": "Shortage",
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Penalty Type",
+      "options": "Shortage\nDelay\nDamage\nDemurrage"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Penalty Amount (ETB)",
+      "reqd": 1
+    },
+    {
+      "default": "Pending",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Pending\nApproved\nWaived\nApplied"
+    },
+    {
+      "fieldname": "column_break_pen",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "quantity_affected",
+      "fieldtype": "Float",
+      "label": "Tonnage Affected"
+    },
+    {
+      "fieldname": "rate_applied",
+      "fieldtype": "Currency",
+      "label": "Rate Applied (ETB)"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description / Justification"
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Data",
+      "label": "Approved By"
+    },
+    {
+      "fieldname": "waived_by",
+      "fieldtype": "Data",
+      "label": "Waived By"
+    },
+    {
+      "fieldname": "waived_reason",
+      "fieldtype": "Small Text",
+      "label": "Waiver Reason"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Dispatch and Logistics",
+  "name": "Order Penalty",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

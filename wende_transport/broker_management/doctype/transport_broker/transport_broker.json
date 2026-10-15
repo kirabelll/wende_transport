@@ -1,0 +1,126 @@
+{
+  "actions": [],
+  "autoname": "field:broker_name",
+  "creation": "2026-10-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "broker_name",
+    "phone",
+    "email",
+    "status",
+    "column_break_brk1",
+    "commission_type",
+    "default_rate",
+    "balance_section",
+    "total_earned",
+    "total_paid",
+    "balance",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "broker_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Broker Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Phone Number",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nInactive"
+    },
+    {
+      "fieldname": "column_break_brk1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Percentage",
+      "fieldname": "commission_type",
+      "fieldtype": "Select",
+      "label": "Default Commission Structure",
+      "options": "Percentage\nFixed"
+    },
+    {
+      "default": "3",
+      "fieldname": "default_rate",
+      "fieldtype": "Float",
+      "label": "Default Rate (% or ETB)"
+    },
+    {
+      "fieldname": "balance_section",
+      "fieldtype": "Section Break",
+      "label": "Commission Balance"
+    },
+    {
+      "default": "0",
+      "fieldname": "total_earned",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Total Earned Commission (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "total_paid",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Total Disbursed (ETB)",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "balance",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Unpaid Commission Balance (ETB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2026-10-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Broker Management",
+  "name": "Transport Broker",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "broker_name",
+  "sort_order": "ASC"
+}
